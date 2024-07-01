@@ -1,0 +1,9 @@
+# ignore font files for testing
+*.ggfnt
+
+# ignore workspaces
+go.work
+go.work.sum
+
+# ignore internal examples
+secret/*
