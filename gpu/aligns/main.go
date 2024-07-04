@@ -11,8 +11,8 @@ import "github.com/hajimehoshi/ebiten/v2/inpututil"
 import "github.com/tinne26/ptxt"
 
 const CanvasWidth, CanvasHeight = 640, 360
-const UpperInstructions = "CLICK AROUND TO SET DRAW COORDINATES\nUSE ARROWS TO CHANGE ALIGNS\nUSE D TO CHANGE TEXT DIRECTION"
-const LowerInstructions = "Click around to set draw coordinates\nUse ARROWS to change aligns\nUse D to change text direction"
+const UpperInstructions = "CLICK AROUND TO SET DRAW COORDINATES\nUSE ARROWS TO CHANGE ALIGNS\n[D] CHANGE TEXT DIRECTION\n[T] CHANGE TEXT"
+const LowerInstructions = "Click around to set draw coordinates\nUse ARROWS to change aligns\n[D] Change text direction\n[T] Change text"
 
 var VertAligns []ptxt.Align = []ptxt.Align{
 	ptxt.Bottom, ptxt.LastBaseline, ptxt.Baseline,
@@ -73,6 +73,7 @@ type Game struct {
 	dirIndex int
 	hiResWidth, hiResHeight float64
 	uppercaseOnly bool
+	staticTextSample bool
 }
 
 func (*Game) Layout(_, _ int) (int, int) { panic("F") }
@@ -95,6 +96,11 @@ func (self *Game) Update() error {
 		if self.horzAlignIndex >= len(HorzAligns) {
 			self.horzAlignIndex = 0
 		}
+	}
+
+	// detect static text sample change
+	if inpututil.IsKeyJustPressed(ebiten.KeyT) {
+		self.staticTextSample = !self.staticTextSample
 	}
 
 	// detect vert align changes
@@ -161,9 +167,14 @@ func (self *Game) Draw(hiResCanvas *ebiten.Image) {
 	}
 
 	// draw text
-	alignStr := self.text.GetAlign().String()
-	if self.uppercaseOnly { alignStr = fmtAlignString(alignStr) }
-	self.text.Draw(self.canvas, alignStr, self.cx, self.cy)
+	var mainText string
+	if self.staticTextSample {
+		mainText = "Spare the judgement\ntake the weight away"
+	} else {
+		mainText = self.text.GetAlign().String()
+	}
+	if self.uppercaseOnly { mainText = fmtAlignString(mainText) }
+	self.text.Draw(self.canvas, mainText, self.cx, self.cy)
 
 	// aux info warnings
 	self.info.SetColor(color.RGBA{140, 70, 40, 255})
