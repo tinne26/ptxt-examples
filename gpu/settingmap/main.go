@@ -73,6 +73,12 @@ func main() {
 	err = strand.Mapping().AutoInitRewriteRules()
 	if err != nil { panic(err) }
 	
+	// configure the mapping cache. this is very optional, only
+	// recommended when fonts have a significant dependency on
+	// conditional mappings. in fact, for this font it's not
+	// really necessary, but at least now you know how it works
+	strand.Mapping().ConfigureCache(192)
+	
 	// create text renderer, set the main properties
 	renderer := ptxt.NewRenderer()
 	renderer.SetStrand(strand)

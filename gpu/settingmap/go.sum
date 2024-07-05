@@ -8,12 +8,12 @@ github.com/hajimehoshi/ebiten/v2 v2.7.2 h1:5HcWAjxhGMBocJh0jH/61Kx4QJ91HkzYtSeSu
 github.com/hajimehoshi/ebiten/v2 v2.7.2/go.mod h1:1vjyPw+h3n30rfTOpIsbWRXSxZ0Oz1cYc6Tq/2DKoQg=
 github.com/jezek/xgb v1.1.1 h1:bE/r8ZZtSv7l9gk6nU0mYx51aXrvnyb44892TwSaqS4=
 github.com/jezek/xgb v1.1.1/go.mod h1:nrhwO0FX/enq75I7Y7G8iN1ubpSGZEiA3v9e9GyRFlk=
-github.com/tinne26/ggfnt v0.0.0-20240704182110-a59b25e0c83f h1:iQhWx86dn+eXQ5l60PYMoi8Qc4n8OHzZ7saOyBC6oDw=
-github.com/tinne26/ggfnt v0.0.0-20240704182110-a59b25e0c83f/go.mod h1:321tVeZU7HVpnEvyPyule7BJfIUwNrziZ3ZbSb87XVY=
+github.com/tinne26/ggfnt v0.0.0-20240705120847-d849d4c6e12d h1:IkmQwrx4es2/QEHWvkpaDIMFzRMb1ZqasE3FgQCzkpA=
+github.com/tinne26/ggfnt v0.0.0-20240705120847-d849d4c6e12d/go.mod h1:321tVeZU7HVpnEvyPyule7BJfIUwNrziZ3ZbSb87XVY=
 github.com/tinne26/ggfnt-fonts/jammy v0.0.0-20240704182610-77ae6be48ecf h1:sswv8VicNN4j1VCkUtdU6+O1lBPFrzEg/357bq6TFaw=
 github.com/tinne26/ggfnt-fonts/jammy v0.0.0-20240704182610-77ae6be48ecf/go.mod h1:x16T3Vq3HDwepm1cxVZ3D+YKhtORrStwhTVH7gJAE28=
-github.com/tinne26/ptxt v0.0.0-20240704182720-470b6a89fd7c h1:d9Tjweck0D6iRKk9mxZkHnB1MclHUgRDT5k6DjNIywI=
-github.com/tinne26/ptxt v0.0.0-20240704182720-470b6a89fd7c/go.mod h1:Qvdu51W26BQ3cn8ooAv7ioxZejFIzgnGeQXgAOKnFbw=
+github.com/tinne26/ptxt v0.0.0-20240705121025-08cffae613f3 h1:jfQKCYEb+dncwyFsdMs8J4Y6vo06t7P0gVqLr22J4zc=
+github.com/tinne26/ptxt v0.0.0-20240705121025-08cffae613f3/go.mod h1:VMW3v9xMnwbWBuJRTnaOKadyh2gxo5bFOaEalMtDGhs=
 golang.org/x/image v0.15.0 h1:kOELfmgrmJlw4Cdb7g/QGuB3CvDrXbqEIww/pNtNBm8=
 golang.org/x/image v0.15.0/go.mod h1:HUYqC05R2ZcZ3ejNQsIHQDQiwWM4JBqmm6MKANTp4LE=
 golang.org/x/sync v0.6.0 h1:5BMeUDZ7vkXGfEr1x9B4bRcTH4lpkTkpdh0T/J+qjbQ=
